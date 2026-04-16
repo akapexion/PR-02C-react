@@ -1,8 +1,11 @@
 import React from 'react'
+import Counter from '../features/Counter'
 
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <>
+        <Counter/>
+    </>
   )
 }
 

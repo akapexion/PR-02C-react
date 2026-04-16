@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <>
-      <p>Home</p>
+      <p className="bg-red-600">Home</p>
 
       {/* <a href="/about">Go to About Screen</a> */}
 
