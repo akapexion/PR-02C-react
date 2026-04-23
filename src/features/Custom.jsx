@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
+import { myData, myData1 } from "./MyContext";
 
-const Custom = ({empInfo}) => {
+const Custom = () => {
+  const abc = useContext(myData);
+  const abc1 = useContext(myData1);
+
   return (
     <>
       <div>Custom Component</div>
-      <p>This is a component created by myself</p>
-      <p>Employee Name is {empInfo.EmpName}</p>
-      <p>Employee Designation is {empInfo.EmpDesignation}</p>
+
+      <p>{abc}</p>
+      <p>{abc1}</p>
     </>
   );
 };

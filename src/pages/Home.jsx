@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Custom from "../features/Custom";
+import MyContext from "../features/MyContext";
 
 const Home = () => {
   return (
@@ -9,6 +11,8 @@ const Home = () => {
       {/* <a href="/about">Go to About Screen</a> */}
 
       <Link to="/about">Go to About Screen</Link>
+
+      <MyContext />
     </>
   );
 };
