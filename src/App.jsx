@@ -1,28 +1,22 @@
-import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Services from "./pages/Services";
-import Contact from "./pages/Contact";
-import Navbar from "./features/Navbar";
-import APIDevelopment from "./features/APIDevelopment";
+import React, { useContext } from "react";
+import { themeContext, ThemeProvider } from "./context/ThemeContext";
+import Routing from "./features/Routing";
 
-const App = () => {
+const ThemedApp = () => {
+  const { theme, setTheme } = useContext(themeContext);
 
   return (
     <>
-        <BrowserRouter>
-        <Navbar/>
-            <Routes>
-                <Route path="/" element={<Home/>}></Route>
-                <Route path="/about" element={<About/>}></Route>
-                <Route path="/services" element={<Services/>}></Route>
-                <Route path="/contact" element={<Contact/>}></Route>
-                <Route path="/api" element={<APIDevelopment/>}></Route>
-            </Routes>
-        </BrowserRouter>    
+      <Routing />
     </>
   );
 };
 
+const App = () => {
+  return (
+    <ThemeProvider>
+      <ThemedApp />
+    </ThemeProvider>
+  )
+}
 export default App;
