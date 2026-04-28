@@ -1,8 +1,13 @@
 import React from 'react'
+import FormHandling from '../features/FormHandling'
+// import ComponentsTypes from '../features/ComponentsTypes'
 
 const Services = () => {
   return (
-    <div>Services</div>
+    <>
+      <FormHandling />
+      {/* <ComponentsTypes /> */}
+    </>
   )
 }
 
